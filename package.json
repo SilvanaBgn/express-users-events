@@ -1,0 +1,24 @@
+{
+  "name": "express-users-events",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilvanaBgn/express-users-events.git"
+  },
+  "author": "Silvana Belen Garcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SilvanaBgn/express-users-events/issues"
+  },
+  "homepage": "https://github.com/SilvanaBgn/express-users-events#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
