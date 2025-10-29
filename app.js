@@ -3,7 +3,7 @@ import routes from "./routes/index.js";
 
 const app = express();
 
-// Middleware
+// Middleware to convert JSON bodies to JS objects
 app.use(express.json());
 
 // Routes
