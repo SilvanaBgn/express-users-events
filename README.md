@@ -1,8 +1,14 @@
 # express-users-events
 
-## Setup
+A project with NodeJS and Express, to create and login users, and relate them with a crud of events!
+
+## How to run
 
 1. Install dependencies:
    ```sh
-   npm install
+   pnpm install
+   ```
+2. Run the project:
+   ```sh
+   pnpm start
    ```
