@@ -12,10 +12,12 @@ app.use(cors()); // Adds Headers to allow any domain to hit this routes
 // }));
 
 app.use(express.json()); // Middleware to convert JSON bodies to JS objects
+app.use(express.static("public")); // Serve static files from the "public" directory
 
 // ROUTES
-app.use("/users", userRoutes);
-app.get("/", (req, res) => {
+app.use("/express-users-events-api/users", userRoutes);
+// app.use("/events", eventRoutes);
+app.get("/express-users-events-api/", (req, res) => {
   res.send("Hello from the server!");
 });
 
