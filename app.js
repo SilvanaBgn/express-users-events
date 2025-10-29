@@ -1,15 +1,25 @@
 import express from "express";
-import routes from "./routes/index.js";
+import userRoutes from "./routes/users.js";
+import cors from "cors";
 
 const app = express();
 
-// Middleware to convert JSON bodies to JS objects
-app.use(express.json());
+// CONFIG EXPRESS
+app.use(cors()); // Adds Headers to allow any domain to hit this routes
+// In the next case, i would allow only a FE from localhost:3000 to access
+// app.use(cors({
+//   origin: 'http://localhost:3000'
+// }));
 
-// Routes
-app.use("/api", routes);
+app.use(express.json()); // Middleware to convert JSON bodies to JS objects
 
-// Start the server
+// ROUTES
+app.use("/users", userRoutes);
+app.get("/", (req, res) => {
+  res.send("Hello from the server!");
+});
+
+// START SERVER
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

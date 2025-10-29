@@ -33,4 +33,4 @@ const login = (req, res) => {
   res.status(200).json({ message: "User logged in successfully" });
 };
 
-export { signUp, login };
+export default { signUp, login };
